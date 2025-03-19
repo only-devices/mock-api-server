@@ -1,0 +1,5 @@
+# The usual
+/node_modules
+
+# Mac nonsense
+.DS_Store
