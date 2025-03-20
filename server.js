@@ -13,7 +13,7 @@ const users = [
 ];
 
 // Mock secret token - uses environment variable if available
-const VALID_TOKEN = process.env.VALID_TOKEN || 'bladder-powdering-confused-hangnail';
+const VALID_TOKEN = process.env.VALID_TOKEN || '570703610f07623232d64e78a6c59f40';
 
 // Middleware to check for valid bearer token
 const authenticateToken = (req, res, next) => {
@@ -53,9 +53,8 @@ app.get('/api/users/:id', authenticateToken, (req, res) => {
 app.post('/api/create', authenticateToken, (req, res) => {
   console.log('Received data:', req.body);
   res.status(200).json({ 
-    message: 'Request received successfully',
-    success: true,
-    timestamp: new Date().toISOString()
+    idReadable: '12345',
+    $type: 'issue'
   });
 });
 
